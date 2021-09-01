@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Christmas from './Christmas';
+
+var day = new Date().getDate();
+var month = new Date().getMonth()+1;
+var year = new Date().getFullYear();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Christmas Countdown</h1>
+      <h1>Today is : {day}-{month}-{year}</h1>
+      <Christmas />
     </div>
   );
 }
