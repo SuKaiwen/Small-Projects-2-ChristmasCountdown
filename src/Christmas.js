@@ -1,4 +1,6 @@
 import React, {PropTypes, Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import snow from './snow.jpg';
 
 class Christmas extends Component {
     constructor(props){
@@ -34,11 +36,28 @@ class Christmas extends Component {
 
     render(){
         return (
-            <div>
-                <h1>Days: {this.state.days}</h1>
-                <h1>Hours: {this.state.hours}</h1>
-                <h1>Minutes: {this.state.minutes}</h1>
-                <h1>Seconds: {this.state.seconds}</h1>
+            <div class = "container" style={{alignItems:'center',justifyContent:"center"}}>
+                <div class = "row" style = {{height:"50vh",alignItems:"center", justifyContent:"center"}}>
+                    <h1>Time until Christmas</h1>
+                    <div class = "row gap-5">
+                        <div class = "col-sm shadow-lg bg-white">
+                            <h1 style={{fontSize:"70px"}}>{this.state.days}</h1>
+                            <h1 class ="display-1" style={{fontSize:"30px"}}>Days</h1>
+                        </div>
+                        <div class = "col-sm shadow-lg bg-white">
+                            <h1 style={{fontSize:"70px"}}>{this.state.hours}</h1>
+                            <h1 class ="display-1" style={{fontSize:"30px"}}>Hours</h1>
+                        </div>
+                        <div class = "col-sm shadow-lg bg-white">
+                            <h1 style={{fontSize:"70px"}}>{this.state.minutes}</h1>
+                            <h1 class ="display-1" style={{fontSize:"30px"}}>Minutes</h1>
+                        </div>
+                        <div class = "col-sm shadow-lg bg-white">
+                            <h1 style={{fontSize:"70px"}}>{this.state.seconds}</h1>
+                            <h1 class ="display-1" style={{fontSize:"30px"}}>Seconds</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
